@@ -11,6 +11,8 @@ class Game
     player1 = gets.chomp
     puts 'What is your name Player Two?'
     player2 = gets.chomp
+    puts "Player 1: #{player1}, Token: X"
+    puts "Player 2: #{player2}, Token: O"
     puts "Let's Play!"
     turn = 1.to_i
     while turn < 10
