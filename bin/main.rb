@@ -57,4 +57,3 @@ end
 
 tic = Game.new
 tic.start
-
