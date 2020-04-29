@@ -11,8 +11,7 @@ class Game
     player1 = gets.chomp
     puts 'What is your name Player Two?'
     player2 = gets.chomp
-    puts "Player 1: #{player1}, Token: X"
-    puts "Player 2: #{player2}, Token: O"
+    choose_symbol
     puts "Let's Play!"
     turn = 1.to_i
     while turn < 10
@@ -24,6 +23,34 @@ class Game
         # store input in board
       end
       turn += 1
+    end
+  end
+
+  def choose_symbol
+    puts 'player1: Please choose your symbol between X or O'
+    player1_symbol = gets.chomp
+    until player1_symbol.include?('X' || 'O')
+      if player1_symbol != 'X' || player1_symbol != 'O'
+        puts 'Wrong symbol choosen please try again'
+        player1_symbol = gets.chomp
+      end
+    end
+  end
+
+  def display_board
+    puts 'Position taken on Board'
+    # Postion of board will shown here
+  end
+
+  def result
+    game_on = true
+    while game_on
+      if winner
+        puts 'Player is winner'
+        game_on = false
+      else
+        puts "It's a draw"
+      end
     end
   end
 end
