@@ -22,7 +22,7 @@ The following example game is won by the first player, X:
 To play Tic-tac-toe:
 * clone or download this project [from github](https://github.com/hemant-soni-vst-au4/tic-tac-toe)
 * cd into the /bin directory
-* run the main.rb file,using command: ./bin/main.rb
+* run the main.rb file,using command: ./main.rb
 
 
 ------------------------------------------------------------------------------
@@ -211,7 +211,7 @@ else if the game was a draw
 end
 ```
 
-Run the tests for the `#play` method by typing `./bin/main.rb` in your terminal.
+Run the tests for the `#play` method by typing `./main.rb` in your terminal.
 
 ## Authors:
 
