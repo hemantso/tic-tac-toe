@@ -9,7 +9,7 @@ class User
     @board = @game.init_board(9)
   end
 
-  # instructions to player
+  
   def welcome
     puts '==========TIC-TAC-TOE=========='
     puts '-------------INSTRUCTIONS---------------'
@@ -17,7 +17,7 @@ class User
     puts 'Choose numbers from 1 to 9 to select desired cell'
     puts 'No duplicate numbers are allowed'
     puts '--------------------------------'
-    # Request for player names and save them to p1 and p2
+    
     puts 'Player 1 please enter your name: '
     p1 = gets.chomp
 
@@ -31,7 +31,7 @@ class User
     display_board
   end
 
-  # Tic Tac Toe Board
+  
   def display_board
     puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
 
@@ -44,8 +44,7 @@ class User
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
 
-  # Game begins, player 1 starts choosing between 1-9
-  # if the input is different valid_move returns false and input is request again
+
   def turn
     current = @game.current_player
     puts "Player #{current}, choose a spot between 1-9"
@@ -62,9 +61,7 @@ class User
     display_board
   end
 
-  # Turn method is called for players to fill the board until @game.over? method is true
-  # If total moves = 9 and no combinations detected, its a draw, if a combination is detected, @game.won is executed
-  def play
+   def play
     turn until @game.over?
     if @game.won?
       puts "Congratulations #{@board[@game.won?.first]}! You Won"
