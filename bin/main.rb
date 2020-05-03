@@ -9,7 +9,6 @@ class User
     @board = @game.init_board(9)
   end
 
-  
   def welcome
     puts '==========TIC-TAC-TOE=========='
     puts '-------------INSTRUCTIONS---------------'
@@ -17,7 +16,7 @@ class User
     puts 'Choose numbers from 1 to 9 to select desired cell'
     puts 'No duplicate numbers are allowed'
     puts '--------------------------------'
-    
+
     puts 'Player 1 please enter your name: '
     p1 = gets.chomp
 
@@ -31,7 +30,6 @@ class User
     display_board
   end
 
-  
   def display_board
     puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
 
@@ -43,7 +41,6 @@ class User
 
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
-
 
   def turn
     current = @game.current_player
@@ -61,7 +58,7 @@ class User
     display_board
   end
 
-   def play
+  def play
     turn until @game.over?
     if @game.won?
       puts "Congratulations #{@board[@game.won?.first]}! You Won"
