@@ -1,10 +1,7 @@
-require './lib/game'
-
 class Board
-  include Game
   attr_accessor :board
   def initialize
-    @board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+    @board = nil
   end
 
   WIN_COMBINATIONS = [
@@ -46,6 +43,11 @@ class Board
              end
     player
   end
+
+  def input_to_index(input)
+    input.to_i - 1
+  end
+
 
   def turn_count
     count = 0
