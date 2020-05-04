@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require './lib/board.rb'
+require_relative '../lib/board.rb'
 
 class User
   def initialize
@@ -44,11 +44,11 @@ class User
   def turn
     current = @game.current_player
     puts "Player #{current}, choose a spot between 1-9"
-    spot = gets.strip    
-    spot = @game.input_to_index(spot) 
+    spot = gets.strip
+    spot = @game.input_to_index(spot)
     if spot.between?(0, 8) == false
-      puts "Please enter a valid input between 1-9"
-      turn 
+      puts 'Please enter a valid input between 1-9'
+      turn
     elsif @game.valid_move?(spot)
       @game.move(spot, @game.current_player)
     else
