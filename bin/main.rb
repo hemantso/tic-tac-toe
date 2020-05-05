@@ -48,7 +48,7 @@ class User
     spot = @game.input_to_index(spot)
     if spot.between?(0, 8) == false
       puts 'Please enter a valid input between 1-9'
-      turn
+      return turn
     elsif @game.valid_move?(spot)
       @game.move(spot, @game.current_player)
     else
