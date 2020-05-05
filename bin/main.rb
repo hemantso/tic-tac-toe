@@ -53,7 +53,7 @@ class User
       @game.move(spot, @game.current_player)
     else
       puts 'This spot has been taken choose another spot'
-      turn
+      return turn
     end
     display_board
   end
