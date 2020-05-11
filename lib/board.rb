@@ -1,7 +1,7 @@
 class Board
   attr_accessor :board
   def initialize
-    @board = nil
+    @board = []
   end
 
   WIN_COMBINATIONS = [
